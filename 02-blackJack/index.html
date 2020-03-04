@@ -16,20 +16,17 @@
     </header>
 
     <div class="botones">
-        <div class="col text-center">
-            <button class="btn btn-danger">Nuevo juego</button>
-            <button class="btn btn-primary"> Pedir carta</button>
-            <button class="btn btn-primary">Detener</button>
+        <div id="divBotones" class="col text-center">
+            <button id="btnNuevo" class="btn btn-danger">Nuevo juego</button>
+            <button id="btnPedir" disabled="disabled" class="btn btn-primary"> Pedir carta</button>
+            <button id="btnDetener" disabled="disabled" class="btn btn-primary">Detener</button>
         </div>
     </div>
 
     <div class="row container">
         <div class="col">
             <h1>Jugador 1 - <small>0</small></h1>
-            <div id="jugador-cartas">
-                <img class="carta" src="assets/cartas/10D.png" alt="">
-                <!-- <img class="carta" src="assets/cartas/10D.png" alt=""> -->
-                <!-- <img class="carta" src="assets/cartas/10D.png" alt=""> -->
+            <div id="jugador-cartas" class="divCartas">
                 <!-- <img class="carta" src="assets/cartas/10D.png" alt=""> -->
             </div>
         </div>
@@ -38,10 +35,7 @@
     <div class="row container mt-2">
         <div class="col">
             <h1>Computadora 1 - <small>0</small></h1>
-            <div id="computadora-cartas">
-                <img class="carta" src="assets/cartas/2S.png" alt="">
-                <!-- <img class="carta" src="assets/cartas/2S.png" alt=""> -->
-                <!-- <img class="carta" src="assets/cartas/2S.png" alt=""> -->
+            <div id="computadora-cartas" class="divCartas">
                 <!-- <img class="carta" src="assets/cartas/2S.png" alt=""> -->
             </div>
         </div>
@@ -49,7 +43,14 @@
 
 
     <script src="assets/js/underscore.min.js"></script>
-    <script src="assets/js/game.js"></script>
+    <!-- <script src="assets/js/game.js"></script> -->
+    <!-- <script src="assets/js/patron_modulo.js"></script> -->
+    <script src="assets/js/juego.min.js"></script>
+
+    <script>
+        console.log(miModulo);
+        miModulo.nuevoJuego();
+    </script>
 </body>
 
 </html>

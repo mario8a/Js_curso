@@ -51,31 +51,28 @@ class PersonaNatural {
     }
 }
 
+class Heroe extends PersonaNatural {
+    clan = 'sin clan';
+
+    constructor(nombre, codigo, frase) {
+        super(nombre, codigo, frase)
+        // Super ahce referencia a la clase donde se extiende
+        // Toda propiedad con this debe ir despues del super
+        this.clan = 'Vengadores'
+    }
+
+    quienSoy() {
+        console.log(`Soy ${this.nombre}, ${this.clan}`);
+        super.quienSoy();
+    }
+}
+
 
 //creando la instancia de esa clase
 
-const spider = new PersonaNatural('Peter', 'SPidey', 'Tu amigo');
-const rion = new PersonaNatural('Pepe', 'Kile', 'Tu amigo');
-
-
-
+// const spider = new PersonaNatural('Peter', 'SPidey', 'Tu amigo');
+const spider = new Heroe('Peter', 'SPidey', 'Tu amigo');
+// const spider = new Heroe();
 spider.quienSoy();
-//spider.miFrase();
+console.log(spider);
 
-spider.setComidaFavorita = 'Pure de papa'
-    // spider.comida = 'Diuende verde'
-
-// console.log(spider);
-// console.log(spider.getComidaFav);
-
-
-// PersonaNatural._conteo = 2;
-console.log('Conteo estatico ', PersonaNatural._conteo);
-// Persona._conteo = 2;
-console.log(PersonaNatural.conteo);
-PersonaNatural.mensaje();
-
-
-PersonaNatural.propiedadExterna = 'Hola mundo'
-console.log(PersonaNatural.propiedadExterna);
-console.log(PersonaNatural);

@@ -1,0 +1,32 @@
+IMPORTANDO EL PLUGIN
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+
+module.exports = {
+    MODO DE DESARROLLO
+    mode: 'development',
+    MODULOS
+    module: {
+        REGLAS
+        rules: [
+            {
+                LE DECIMOS QUE TOME LOS ARCHIVOS HTML
+                test: /\.html$/,
+                use: [
+                    {
+                        LE DECIMOS QUE HAGA
+                        loader: 'html-loader'
+                    }
+                ]
+            }
+        ]
+    },
+    IMPORTANDO LOS PLUGIN
+    plugins: [
+        new HtmlWebPackPlugin({
+            EL ARCHIVO QUE VA TOMAR
+            template: './src/index.html',
+            A DONDE LO VA ENVIAR
+            filename: '/index.html'
+        }),
+    ]
+}

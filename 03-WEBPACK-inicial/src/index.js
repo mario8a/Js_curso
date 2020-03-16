@@ -1,4 +1,5 @@
-const saludar = (nombre) => {
+import {saludar} from './js/componentes';
+import './styles.css'
+const nombre = 'Mario';
 
-    console.log('Creando una etiquta');
-}
+saludar(nombre);
